@@ -1,5 +1,277 @@
-.grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+
+.pokemon-card.fire .Dcircle {
+  background-color: var(--type-fire-circle);
 }
+.pokemon-card.water .Dcircle {
+  background-color: var(--type-water-circle);
+}
+.pokemon-card.grass .Dcircle {
+  background-color: var(--type-grass-circle);
+}
+.pokemon-card.electric .Dcircle {
+  background-color: var(--type-electric-circle);
+}
+.pokemon-card.poison .Dcircle {
+  background-color: var(--type-poison-circle);
+}
+.pokemon-card.fighting .Dcircle {
+  background-color: var(--type-fighting-circle);
+}
+.pokemon-card.ice .Dcircle {
+  background-color: var(--type-ice-circle);
+}
+.pokemon-card.bug .Dcircle {
+  background-color: var(--type-bug-circle);
+}
+.pokemon-card.normal .Dcircle {
+  background-color: var(--type-normal-circle);
+}
+.pokemon-card.rock .Dcircle {
+  background-color: var(--type-rock-circle);
+}
+.pokemon-card.ground .Dcircle {
+  background-color: var(--type-ground-circle);
+}
+.pokemon-card.ghost .Dcircle {
+  background-color: var(--type-ghost-circle);
+}
+.pokemon-card.psychic .Dcircle {
+  background-color: var(--type-psychic-circle);
+}
+.pokemon-card.fairy .Dcircle {
+  background-color: var(--type-fairy-circle);
+}
+.pokemon-card.dark .Dcircle {
+  background-color: var(--type-dark-circle);
+}
+.pokemon-card.steel .Dcircle {
+  background-color: var(--type-steel-circle);
+}
+.pokemon-card.flying .Dcircle {
+  background-color: var(--type-flying-circle);
+}
+.pokemon-card.dragon .Dcircle {
+  background-color: var(--type-dragon-circle);
+}
+
+
+.pokemon-card.fire {
+  background: var(--type-fire-bg);
+}
+.pokemon-card.water {
+  background: var(--type-water-bg);
+}
+.pokemon-card.grass {
+  background: var(--type-grass-bg);
+}
+.pokemon-card.electric {
+  background: var(--type-electric-bg);
+}
+.pokemon-card.poison {
+  background: var(--type-poison-bg);
+}
+.pokemon-card.fighting {
+  background: var(--type-fighting-bg);
+}
+.pokemon-card.ice {
+  background: var(--type-ice-bg);
+}
+.pokemon-card.bug {
+  background: var(--type-bug-bg);
+}
+.pokemon-card.normal {
+  background: var(--type-normal-bg);
+}
+.pokemon-card.rock {
+  background: var(--type-rock-bg);
+}
+.pokemon-card.ground {
+  background: var(--type-ground-bg);
+}
+.pokemon-card.ghost {
+  background: var(--type-ghost-bg);
+}
+.pokemon-card.psychic {
+  background: var(--type-psychic-bg);
+}
+.pokemon-card.fairy {
+  background: var(--type-fairy-bg);
+}
+.pokemon-card.dark {
+  background: var(--type-dark-bg);
+}
+.pokemon-card.steel {
+  background: var(--type-steel-bg);
+}
+.pokemon-card.flying {
+  background: var(--type-flying-bg);
+}
+.pokemon-card.dragon {
+  background: var(--type-dragon-bg);
+}
+
+            
+  .type {
+    padding: 2px 6px;
+    border-radius: 5px;
+    display: inline-block;
+    text-transform: capitalize;
+  }
+
+    .grass {
+    color: #78C850;
+  }
+
+  .type.water {
+    color: #6890F0;
+  }
+
+  .type.fire {
+    color: #F08030;
+  }
+
+  .type.electric {
+    color: #F8D030;
+  }
+
+  .type.poison {
+    color: #A040A0;
+
+  }
+
+  .type.fighting {
+    color: #C03028;
+  }
+
+  .type.ice {
+    color: #98D8D8;
+
+  }
+
+
+  .pokemon-card {
+              width: 60dvh;
+              height: 90dvh;
+              border-radius: 20px;
+              background: linear-gradient(135deg, #79A0C5, #79A0B0);
+              position: relative;
+              overflow: hidden;
+  border: 1.5dvh solid gold;
+          }
+
+          h2 {
+            font-size: 4dvh;
+            color: black;
+            text-align: left;
+            margin-top: 2dvh;
+            margin-left: 2dvh;
+          }
+
+          h3 {
+            font-size: 5dvh;
+            text-align: center;
+            margin-top: 1dvh;
+            position: absolute;
+            top: 50%;
+        
+          }
+          
+          .Dcircle {
+              position: absolute;
+              border-radius: 50%;
+              background-color: rgba(255,255,255,0.4);
+              filter: blur(10px);
+          }
+          
+          .Dcircle:nth-child(3) {
+              width: 10dvh;
+              height: 10dvh;
+              left: 6dvh;
+              bottom: 6dvh;
+          }
+          
+          .Dcircle:nth-child(4) {
+            width: 14dvh;
+            height: 14dvh;
+            left: 36dvh;
+            bottom: 14dvh;
+          }
+          
+          .Dcircle:nth-child(5) {
+            width: 11dvh;
+            height: 11dvh;
+            right: 4dvh;
+            bottom: 78dvh;
+          }
+          
+          .Dcircle:nth-child(6) {
+            width: 16dvh;
+            height: 16dvh;
+            left: 41dvh;
+            bottom: 5dvh;
+          }
+          
+          .Dcircle:nth-child(7) {
+            width: 12dvh;
+            height: 12dvh;
+            right: 41dvh;
+            bottom: 27dvh;
+          }
+          .Dcircle:nth-child(8) {
+            width: 24dvh;
+            height: 24dvh;
+            right: 33dvh;
+            bottom: 62dvh;
+          }
+          
+          .Dcircle:nth-child(9) {
+              width: 30dvh;
+              height: 60dvh;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              opacity: 1;
+            
+              filter: blur(30px);
+          }
+
+          .square {
+            width: 92%;
+            height: 40%;
+            background-color: white;
+          
+            position: absolute;
+            top: 27.5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+
+            img {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 24dvh;
+            }
+
+            .HPcircel{
+              position: absolute;
+              width: 10dvh;
+              height: 10dvh;
+              border-radius: 50%;
+              background-color: yellow;
+              filter: blur(10px);
+              left: 5dvh;
+              top: 5dvh;
+            }
+
+
+
+
+          }
+
+
+
+
+

@@ -1,0 +1,49 @@
+:root {
+    /* ###################################### */
+    /* ############## Cards #################*/
+    /* ###################################### */
+
+    /* Dcircle kleuren */
+    --type-fire-circle: rgba(255, 170, 128, 0.45);
+    --type-water-circle: rgb(186 214 235 / 32%);
+    --type-grass-circle: rgba(200, 255, 225, 0.45);
+    --type-electric-circle: rgba(255, 255, 180, 0.45);
+    --type-poison-circle: rgba(200, 128, 200, 0.45);
+    --type-fighting-circle: rgba(230, 100, 90, 0.45);
+    --type-ice-circle: rgba(200, 240, 240, 0.45);
+    --type-bug-circle: rgba(210, 220, 120, 0.45);
+    --type-normal-circle: rgba(200, 200, 160, 0.45);
+    --type-rock-circle: rgba(230, 210, 130, 0.45);
+    --type-ground-circle: rgba(240, 220, 150, 0.45);
+    --type-ghost-circle: rgba(180, 160, 220, 0.45);
+    --type-psychic-circle: rgba(255, 160, 190, 0.45);
+    --type-fairy-circle: rgba(250, 210, 230, 0.45);
+    --type-dark-circle: rgba(160, 140, 120, 0.45);
+    --type-steel-circle: rgba(220, 220, 240, 0.45);
+    --type-flying-circle: rgba(200, 180, 250, 0.45);
+    --type-dragon-circle: rgba(180, 140, 255, 0.45);
+
+
+    /* 🟠 Achtergrondkleuren per type */
+    --type-fire-bg: linear-gradient(135deg, #FF6A00, #FF8E42);
+    --type-water-bg: linear-gradient(135deg, #6fb5cf, #3fbbe4);
+    --type-grass-bg: linear-gradient(135deg, #9dfd98, #b8d884);
+    --type-electric-bg: linear-gradient(135deg, #FFEA00, #FFEA00);
+    --type-poison-bg: linear-gradient(135deg, #A040A0, #A040A0);
+    --type-fighting-bg: linear-gradient(135deg, #C03028, #C03028);
+    --type-ice-bg: linear-gradient(135deg, #98D8D8, #98D8D8);
+    --type-bug-bg: linear-gradient(135deg, #A8B400, #A8B400);
+    --type-normal-bg: linear-gradient(135deg, #A8A878, #A8A878);
+    --type-rock-bg: linear-gradient(135deg, #B8A038, #B8A038);
+    --type-ground-bg: linear-gradient(135deg, #E0C068, #E0C068);
+    --type-ghost-bg: linear-gradient(135deg, #705898, #705898);
+    --type-psychic-bg: linear-gradient(135deg, #F85888, #F85888);
+    --type-fairy-bg: linear-gradient(135deg, #F0B6D2, #F0B6D2);
+    --type-dark-bg: linear-gradient(135deg, #705848, #705848);
+    --type-steel-bg: linear-gradient(135deg, #B8B8D0, #B8B8D0);
+    --type-flying-bg: linear-gradient(135deg, #A890F0, #A890F0);
+    --type-dragon-bg: linear-gradient(135deg, #7038F8, #7038F8);
+
+
+
+}
