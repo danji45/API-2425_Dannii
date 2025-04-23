@@ -1,0 +1,152 @@
+/* detail.css */
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .back-link, .liked-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .pokemon-detail-card {
+    width: 90%;
+    max-width: 600px;
+    margin: 30px auto;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: rgba(244, 233, 233, 0.762);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .pokemon-name {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 32px;
+    text-transform: capitalize;
+  }
+  
+  .pokemon-image-container {
+    text-align: center;
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .pokemon-image {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .stats-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+  }
+  
+  .stats-container h2 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-gap: 10px;
+  }
+  
+  .stat-item {
+    display: grid;
+    grid-template-columns: 100px 1fr 40px;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .stat-name {
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+  
+  .stat-bar-container {
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .stat-bar {
+    height: 100%;
+    background-color: #4caf50;
+  }
+  
+  .like-button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .like-button:hover {
+    transform: scale(1.05);
+    background-color: #ff3333;
+  }
+  
+  .heart-icon {
+    margin-right: 5px;
+  }
+  
+  .type-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+  }
+  
+  .type {
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+
+.type.grass { color: #78C850; }
+.type.water { color: #6890F0; }
+.type.fire { color: #F08030; }
+.type.electric { color: #F8D030; }
+.type.poison { color: #A040A0; }
+.type.fighting { color: #C03028; }
+.type.ice { color: #98D8D8; }
+.type.bug { color: #A8B400; }
+.type.normal { color: #A8A878; }
+.type.rock { color: #B8A038; }
+.type.ground { color: #E0C068; }
+.type.ghost { color: #705898; }
+.type.psychic { color: #F85888; }
+.type.fairy { color: #F0B6D2; }
+.type.dark { color: #705848; }
+.type.steel { color: #B8B8D0; }
+.type.flying { color: #A890F0; }
+.type.dragon { color: #7038F8; }

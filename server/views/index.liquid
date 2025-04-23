@@ -1,36 +1,66 @@
 {% layout "server/layouts/base.liquid" %}
 
-
 {% block content %}
-  <h1 class="h1">{{ title }}</h1>
-  <ul>
-    {% for pokemon in pokemons %}
-      <div class="pokemon-card {{ pokemon.types[0] }}">
-        <h2>{{ pokemon.name | capitalize }}</h2>
-        <h3>
-          {% for type in pokemon.types %}
-            <span class="type {{ type }}">{{ type | capitalize }}</span>
-          {% endfor %}
-        </h3>
+  <div class="swipe-container">
+    <div class="card-stack">
+      {% for pokemon in pokemons %}
+        <div
+          class="pokemon-card {{ pokemon.types[0] }}"
+          data-id="{{ pokemon.id }}"
+          data-pokemon='{{ pokemon | json | escape }}'>
+          <h2>{{ pokemon.name | capitalize }}</h2>
+          <h3 class="HPcircel">{{ pokemon.hp }}</h3>
+          <h3>Attack: {{ pokemon.attack }}</h3>
+          <h3>Defense: {{ pokemon.defense }}</h3>
+          <h3>Speed: {{ pokemon.speed }}</h3>
 
-        <div class="Dcircle"></div>
-        <div class="Dcircle"></div>
-        <div class="Dcircle"></div>
-        <div class="Dcircle"></div>
-        <div class="Dcircle"></div>
-        <div class="Dcircle"></div>
-        <div class="Dcircle"></div>
-        <div class="Dcircle"></div>
-        <div class="Dcircle"></div>
-        <div class="HPcircel"></div>
+          <div class="resistance-weakness-wrapper">
+            <div class="column">
+              <h4>Weaknesses:</h4>
+              <div class="type-images">
+                {% for weakness in pokemon.weaknesses %}
+                  <img
+                    src="client/img/{{ weakness }}_circle.png"
+                    alt="{{ weakness | capitalize }}"
+                    class="type-icon">
+                {% endfor %}
+              </div>
+            </div>
+            <div class="column">
+              <h4>Resistances:</h4>
+              <div class="type-images">
+                {% for resistance in pokemon.resistances %}
+                  <img
+                    src="client/img/{{ resistance }}_circle.png"
+                    alt="{{ resistance | capitalize }}"
+                    class="type-icon">
+                {% endfor %}
+              </div>
+            </div>
+          </div>
 
-        <div class="square">
-          <a href="/pokemon/{{ pokemon.id }}">
-            <img src="{{ pokemon.sprite }}" alt="{{ pokemon.name }}">
-          </a>
+          <div class="Dcircle"></div>
+          <div class="Dcircle"></div>
+          <div class="square" style="background-image: url('/client/img/{{ pokemon.types[0] }}.png')">
+            <a href="/pokemon/{{ pokemon.id }}">
+              <img src="{{ pokemon.sprite }}" alt="{{ pokemon.name }}">
+            </a>
+          </div>
+
+          <div class="swipe-actions">
+            <button class="dislike-btn">✗</button>
+            <button class="like-btn">❤️</button>
+          </div>
         </div>
-      </div>
-    {% endfor %}
+      {% endfor %}
 
-  </ul>
+      <div class="no-more-cards" style="display: none;">
+        <h2>No more Pokémon!</h2>
+        <p>Refresh to get new Pokémon or check your liked list.</p>
+        <button class="refresh-btn" onclick="location.reload()">Refresh</button>
+      </div>
+    </div>
+  </div>
 {% endblock %}
+
+<script src="/client/js/liked.js"></script>

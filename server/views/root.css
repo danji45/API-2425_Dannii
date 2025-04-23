@@ -1,49 +1,83 @@
+/* Include type colors from your root.css */
 :root {
-    /* ###################################### */
-    /* ############## Cards #################*/
-    /* ###################################### */
+  /* Card circle colors */
+  --type-fire-circle: rgba(255, 170, 128, 0.45);
+  --type-water-circle: rgb(186 214 235 / 32%);
+  --type-grass-circle: rgba(200, 255, 225, 0.45);
+  --type-electric-circle: rgba(255, 255, 180, 0.45);
+  --type-poison-circle: rgba(200, 128, 200, 0.45);
+  --type-fighting-circle: rgba(230, 100, 90, 0.45);
+  --type-ice-circle: rgba(200, 240, 240, 0.45);
+  --type-bug-circle: rgba(210, 220, 120, 0.45);
+  --type-normal-circle: rgba(200, 200, 160, 0.45);
+  --type-rock-circle: rgba(230, 210, 130, 0.45);
+  --type-ground-circle: rgba(240, 220, 150, 0.45);
+  --type-ghost-circle: rgba(180, 160, 220, 0.45);
+  --type-psychic-circle: rgba(255, 160, 190, 0.45);
+  --type-fairy-circle: rgba(250, 210, 230, 0.45);
+  --type-dark-circle: rgba(160, 140, 120, 0.45);
+  --type-steel-circle: rgba(220, 220, 240, 0.45);
+  --type-flying-circle: rgba(200, 180, 250, 0.45);
+  --type-dragon-circle: rgba(180, 140, 255, 0.45);
 
-    /* Dcircle kleuren */
-    --type-fire-circle: rgba(255, 170, 128, 0.45);
-    --type-water-circle: rgb(186 214 235 / 32%);
-    --type-grass-circle: rgba(200, 255, 225, 0.45);
-    --type-electric-circle: rgba(255, 255, 180, 0.45);
-    --type-poison-circle: rgba(200, 128, 200, 0.45);
-    --type-fighting-circle: rgba(230, 100, 90, 0.45);
-    --type-ice-circle: rgba(200, 240, 240, 0.45);
-    --type-bug-circle: rgba(210, 220, 120, 0.45);
-    --type-normal-circle: rgba(200, 200, 160, 0.45);
-    --type-rock-circle: rgba(230, 210, 130, 0.45);
-    --type-ground-circle: rgba(240, 220, 150, 0.45);
-    --type-ghost-circle: rgba(180, 160, 220, 0.45);
-    --type-psychic-circle: rgba(255, 160, 190, 0.45);
-    --type-fairy-circle: rgba(250, 210, 230, 0.45);
-    --type-dark-circle: rgba(160, 140, 120, 0.45);
-    --type-steel-circle: rgba(220, 220, 240, 0.45);
-    --type-flying-circle: rgba(200, 180, 250, 0.45);
-    --type-dragon-circle: rgba(180, 140, 255, 0.45);
-
-
-    /* 🟠 Achtergrondkleuren per type */
-    --type-fire-bg: linear-gradient(135deg, #FF6A00, #FF8E42);
-    --type-water-bg: linear-gradient(135deg, #6fb5cf, #3fbbe4);
-    --type-grass-bg: linear-gradient(135deg, #9dfd98, #b8d884);
-    --type-electric-bg: linear-gradient(135deg, #FFEA00, #FFEA00);
-    --type-poison-bg: linear-gradient(135deg, #A040A0, #A040A0);
-    --type-fighting-bg: linear-gradient(135deg, #C03028, #C03028);
-    --type-ice-bg: linear-gradient(135deg, #98D8D8, #98D8D8);
-    --type-bug-bg: linear-gradient(135deg, #A8B400, #A8B400);
-    --type-normal-bg: linear-gradient(135deg, #A8A878, #A8A878);
-    --type-rock-bg: linear-gradient(135deg, #B8A038, #B8A038);
-    --type-ground-bg: linear-gradient(135deg, #E0C068, #E0C068);
-    --type-ghost-bg: linear-gradient(135deg, #705898, #705898);
-    --type-psychic-bg: linear-gradient(135deg, #F85888, #F85888);
-    --type-fairy-bg: linear-gradient(135deg, #F0B6D2, #F0B6D2);
-    --type-dark-bg: linear-gradient(135deg, #705848, #705848);
-    --type-steel-bg: linear-gradient(135deg, #B8B8D0, #B8B8D0);
-    --type-flying-bg: linear-gradient(135deg, #A890F0, #A890F0);
-    --type-dragon-bg: linear-gradient(135deg, #7038F8, #7038F8);
-
-
-
+  /* Background colors by type */
+  --type-fire-bg: linear-gradient(135deg, #FF6A00, #FF8E42);
+  --type-water-bg: linear-gradient(135deg, #6fb5cf, #3fbbe4);
+  --type-grass-bg: linear-gradient(135deg, #9dfd98, #b8d884);
+  --type-electric-bg: linear-gradient(135deg, #FFEA00, #FFEA00);
+  --type-poison-bg: linear-gradient(135deg, #A040A0, #A040A0);
+  --type-fighting-bg: linear-gradient(135deg, #C03028, #C03028);
+  --type-ice-bg: linear-gradient(135deg, #98D8D8, #98D8D8);
+  --type-bug-bg: linear-gradient(135deg, #A8B400, #A8B400);
+  --type-normal-bg: linear-gradient(135deg, #A8A878, #A8A878);
+  --type-rock-bg: linear-gradient(135deg, #B8A038, #B8A038);
+  --type-ground-bg: linear-gradient(135deg, #E0C068, #E0C068);
+  --type-ghost-bg: linear-gradient(135deg, #705898, #705898);
+  --type-psychic-bg: linear-gradient(135deg, #F85888, #F85888);
+  --type-fairy-bg: linear-gradient(135deg, #F0B6D2, #F0B6D2);
+  --type-dark-bg: linear-gradient(135deg, #705848, #705848);
+  --type-steel-bg: linear-gradient(135deg, #B8B8D0, #B8B8D0);
+  --type-flying-bg: linear-gradient(135deg, #A890F0, #A890F0);
+  --type-dragon-bg: linear-gradient(135deg, #7038F8, #7038F8);
 }
+
+/* Pokemon type circle styling */
+.pokemon-card.fire .Dcircle { background-color: var(--type-fire-circle); }
+.pokemon-card.water .Dcircle { background-color: var(--type-water-circle); }
+.pokemon-card.grass .Dcircle { background-color: var(--type-grass-circle); }
+.pokemon-card.electric .Dcircle { background-color: var(--type-electric-circle); }
+.pokemon-card.poison .Dcircle { background-color: var(--type-poison-circle); }
+.pokemon-card.fighting .Dcircle { background-color: var(--type-fighting-circle); }
+.pokemon-card.ice .Dcircle { background-color: var(--type-ice-circle); }
+.pokemon-card.bug .Dcircle { background-color: var(--type-bug-circle); }
+.pokemon-card.normal .Dcircle { background-color: var(--type-normal-circle); }
+.pokemon-card.rock .Dcircle { background-color: var(--type-rock-circle); }
+.pokemon-card.ground .Dcircle { background-color: var(--type-ground-circle); }
+.pokemon-card.ghost .Dcircle { background-color: var(--type-ghost-circle); }
+.pokemon-card.psychic .Dcircle { background-color: var(--type-psychic-circle); }
+.pokemon-card.fairy .Dcircle { background-color: var(--type-fairy-circle); }
+.pokemon-card.dark .Dcircle { background-color: var(--type-dark-circle); }
+.pokemon-card.steel .Dcircle { background-color: var(--type-steel-circle); }
+.pokemon-card.flying .Dcircle { background-color: var(--type-flying-circle); }
+.pokemon-card.dragon .Dcircle { background-color: var(--type-dragon-circle); }
+
+/* Pokemon card background styling */
+.pokemon-card.fire { background: var(--type-fire-bg); }
+.pokemon-card.water { background: var(--type-water-bg); }
+.pokemon-card.grass { background: var(--type-grass-bg); }
+.pokemon-card.electric { background: var(--type-electric-bg); }
+.pokemon-card.poison { background: var(--type-poison-bg); }
+.pokemon-card.fighting { background: var(--type-fighting-bg); }
+.pokemon-card.ice { background: var(--type-ice-bg); }
+.pokemon-card.bug { background: var(--type-bug-bg); }
+.pokemon-card.normal { background: var(--type-normal-bg); }
+.pokemon-card.rock { background: var(--type-rock-bg); }
+.pokemon-card.ground { background: var(--type-ground-bg); }
+.pokemon-card.ghost { background: var(--type-ghost-bg); }
+.pokemon-card.psychic { background: var(--type-psychic-bg); }
+.pokemon-card.fairy { background: var(--type-fairy-bg); }
+.pokemon-card.dark { background: var(--type-dark-bg); }
+.pokemon-card.steel { background: var(--type-steel-bg); }
+.pokemon-card.flying { background: var(--type-flying-bg); }
+.pokemon-card.dragon { background: var(--type-dragon-bg); }
+

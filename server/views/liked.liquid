@@ -1,0 +1,22 @@
+{% layout "server/layouts/base.liquid" %}
+
+{% block content %}
+  <header class="header">
+    <h1 class="title">Jouw gelikete Pokémon</h1>
+    <a href="/" class="back-link">← Ga terug naar swipen</a>
+  </header>
+
+  <div class="liked-container">
+    <div class="liked-grid">
+      <!-- Hier vult JavaScript de kaarten automatisch in! -->
+    </div>
+
+    <div class="empty-state" style="display: none;">
+      <h2>Geen gelikete Pokémon</h2>
+      <p>Ga terug en begin met swipen, voor jouw perfecte Pokémon!</p>
+      <a href="/" class="action-button">Begin Swipen!</a>
+    </div>
+  </div>
+{% endblock %}
+
+<script src="/client/js/liked.js"></script>

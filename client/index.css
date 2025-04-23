@@ -4,8 +4,13 @@
 
 /*.layout and view styling */
 @import '../server/layouts/base.css';
-@import '../server/views/index.css';
+@import '../server/views/index.css'; 
 @import '../server/views/root.css';
+@import '../server/views/detail.css';
+@import '../server/views/swipe.css';
+@import '../server/views/liked.css';
+@import '../server/views/header.css';
+
 
 /* component styling */
 @import '../server/components/card/card.css';

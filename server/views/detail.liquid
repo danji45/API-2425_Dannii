@@ -1,22 +1,52 @@
 {% layout "server/layouts/base.liquid" %}
-{% block head %}
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="root.css">
-{% endblock %}
 
 {% block content %}
-  <h1>{{ item.name | capitalize }}</h1>
-
-  <img src="{{ item.sprite }}" alt="{{ item.name }}">
-
-  <h2>Stats</h2>
-  <ul>
-    {% for stat in item.stats %}
-      <li>{{ stat.name | capitalize }}: {{ stat.value }}</li>
-    {% endfor %}
-  </ul>
-
-  <a href="/">← Terug naar overzicht</a>
 
 
+  <div class="pokemon-detail-card {{ item.types[0] }}">
+    <h1 class="pokemon-name">{{ item.name | capitalize }}</h1>
+
+    <div class="pokemon-image-container">
+      <img
+        id="pokemon-sprite"
+        class="pokemon-image"
+        src="{{ item.sprite }}"
+        alt="{{ item.name }}"
+        onload="setPokemonColors(this)">
+    </div>
+
+    <div class="type-container">
+      {% for type in item.types %}
+        <span class="type {{ type }}">{{ type | capitalize }}</span>
+      {% endfor %}
+    </div>
+
+    <div class="color-info">
+      <h2>Dominant Colors</h2>
+      <div id="color-display" class="color-display">
+        <div id="dominant-color" class="color-box"></div>
+        <div id="color-hex" class="color-text"></div>
+      </div>
+    </div>
+
+
+    <div class="stats-container">
+      <h2>Stats</h2>
+      <div class="stats-grid">
+        {% for stat in item.stats %}
+          <div class="stat-item">
+            <div class="stat-name">{{ stat.name | capitalize }}</div>
+            <div class="stat-bar-container">
+              <div class="stat-bar" style="width: {{ stat.value | divided_by: 2 }}%;"></div>
+            </div>
+            <div class="stat-value">{{ stat.value }}</div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Include the external JS file -->
+  <script src="/client/js/pokemon-color.js"></script>
 {% endblock %}
