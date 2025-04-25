@@ -25,12 +25,6 @@
     overflow: hidden;
   }
   
-  .pokemon-name {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 32px;
-    text-transform: capitalize;
-  }
   
   .pokemon-image-container {
     text-align: center;

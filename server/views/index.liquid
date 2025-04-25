@@ -3,12 +3,16 @@
 {% block content %}
   <div class="swipe-container">
     <div class="card-stack">
+
+      {% assign z = pokemons.size %}
       {% for pokemon in pokemons %}
         <div
           class="pokemon-card {{ pokemon.types[0] }}"
           data-id="{{ pokemon.id }}"
-          data-pokemon='{{ pokemon | json | escape }}'>
-          <h2>{{ pokemon.name | capitalize }}</h2>
+          data-pokemon='{{ pokemon | json | escape }}'
+          style="z-index: {{ z }}">
+
+          <h2 class="pokemon-name">{{ pokemon.name | capitalize }}</h2>
           <h3 class="HPcircel">{{ pokemon.hp }}</h3>
           <h3>Attack: {{ pokemon.attack }}</h3>
           <h3>Defense: {{ pokemon.defense }}</h3>
@@ -41,6 +45,10 @@
 
           <div class="Dcircle"></div>
           <div class="Dcircle"></div>
+          <div class="Dcircle"></div>
+          <div class="Dcircle"></div>
+          <div class="Dcircle"></div>
+          <div class="Dcircle"></div>
           <div class="square" style="background-image: url('/client/img/{{ pokemon.types[0] }}.png')">
             <a href="/pokemon/{{ pokemon.id }}">
               <img src="{{ pokemon.sprite }}" alt="{{ pokemon.name }}">
@@ -52,6 +60,7 @@
             <button class="like-btn">❤️</button>
           </div>
         </div>
+        {% assign z = z | minus: 1 %}
       {% endfor %}
 
       <div class="no-more-cards" style="display: none;">
@@ -63,4 +72,6 @@
   </div>
 {% endblock %}
 
-<script src="/client/js/liked.js"></script>
+{% block scripts %}
+  <script src="/client/js/swipe.js" defer></script>
+{% endblock %}

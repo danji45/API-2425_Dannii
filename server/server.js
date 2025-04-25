@@ -163,7 +163,7 @@ app.get('/plant/:id/', async (req, res) => {
 
 async function fetchAllPokemon() {
   const maxPokemon = 1000; // Number of Pokémon to fetch
-  const amount = 5 ;
+  const amount = 20; ;
 
   function getRandomInt(max) {
     return Math.floor(Math.random() * max) + 1;
