@@ -1,112 +1,73 @@
-# API @cmda-minor-web 2024 - 2025
-Het web is een geweldige plek en de beschikbare technologieën ervan zijn vandaag de dag krachtiger dan ooit tevoren.
-De kracht van het web ligt in het feit dat het een platform is dat voor iedereen beschikbaar is en dat het gebaseerd is
-op open standaarden. De technologieën worden ontworpen en gespecificeerd op basis van consensus en zijn niet in handen
-van één enkele entiteit.
+# PokéSwipe – Tinder, maar dan voor Pokémon
 
-Desondanks zijn er veel mensen en bedrijven die vinden dat het internet niet voldoet aan hun behoeften. Dit blijkt uit
-de pogingen van grote techbedrijven om hun eigen afgesloten ecosystemen te creëren. Ze streven hiermee naar controle over
-zowel de gebruikerservaring als de gegenereerde data.
+## Over het project
 
-**In dit vier weken durende vak zullen we de kracht van het web ervaren en kijken hoe we (mobiele) web apps kunnen maken die
-net zo aantrekkelijk zijn als native mobiele apps. We beginnen met het maken van een server-side gerenderde applicatie
-waarbij we geleidelijk de gebruikerservaring verbeteren met relevante beschikbare web API's.**
+PokéSwipe is een webapplicatie waarmee je Pokémonkaartenkunt liken. Simpel gezegd: naar rechts als je 'm leuk vindt, naar links als je 'm niks vindt. Een soort Tinder, maar dan met Pokémon. Ik wilde iets maken dat speels is, herkenbaar qua concept, en technisch toch uitdagend genoeg.
 
-[TLDR; hoe zet ik mijn project op?](#Inrichten-ontwikkelomgeving)
+De app is gebouwd in Node.js met Tinyhttp als backend. De frontend is gemaakt met HTML, CSS en JavaScript, zonder frameworks.
 
-## Doelen
+Het project was trouwens voor school, dus ik heb het ook een beetje binnen dat kader gebouwd: overzichtelijk, leerzaam en vooral iets waar ik zelf lol in had.
 
-Na deze cursus zul je:
+### Waarom ik dit wilde maken
 
-- In staat zijn om een server-side gerenderde applicatie te maken.
-- In staat zijn om een enerverende gebruikerservaring te creëren.
-- Een breder begrip hebben van het web en zijn mogelijkheden.
+Ik wilde een manier maken waarop je kaarten kon beoordelen zonder allemaal moeilijke menu’s, maar lekker makkelijk met 2 knoppen. Een groene like, en een rode dislike knop. En het leek me leuk om Pokémonkaarten als uitgangspunt te gebruiken, iets waar ik vroeger veel mee gespeeld heb
 
-## Opdracht
+Wat voor mij belangrijk was:
 
-In dit vak zullen we een van de meest voorkomende app-concepten van vandaag
-gebruiken en ontdekken dat we deze kunnen maken met moderne webtechnologie
-met als doel om een rijke gebruikerservaring creëeren.
+<li> Swipen met een soepele animatie
+<li>Design dat aan Pokémonkaarten doet denken
+<li>Simpele interface
+<li>Kleurgebruik gebaseerd op Pokémon-types
+<li>Werken met localStorage om data tijdelijk op te slaan
 
-Randvoorwaarden:
+## Gebruikerservaring
 
-- Minimaal een overzichts- en detailpagina
-- Gebouwd in TinyHTTP + Liquid
-- Minimaal een content API
-- Minimaal twee Web API's
+Als gebruiker zie je steeds één kaart tegelijk. klik je op de grone knop, dan wordt die Pokémon geliket. druk je op de rode knop, dan gebeurt er niks. Dat was eigenlijk een bug, maar daarover straks meer. Je kunt je gelikete Pokémon terugzien op een aparte pagina. En op de detailpagina krijg je wat extra info over de Pokémon.
 
-Voorbeelden:
+In de laatste week had ik nog een probleem met localStorage: gelikete Pokémon werden soms niet opgeslagen, en disliked kaarten verdwenen ook niet zoals bedoeld. Uiteindelijk kwam ik erachter dat mijn browser (Chrome) gek deed met de localStorage-geschiedenis. Toen ben ik tijdelijk overgestapt naar Arc. Daar werkte het wel. Uiteindelijk kwam ik er achter dat je de localStorage kan verwijderen van je browser, dus dat had ik ook gedaan, en toen liep alles weer zoals het moest.
 
-- Maak je eigen streamingplatform (Netflix/Spotify).
-- Maak je eigen doom-scroll-app (Instagram/TikTok).
-- Maak je eigen chatapplicatie (WhatsApp/Signal).
-- Een andere app die je zelf leuk vindt...
+## Het proces per week
 
-Voorbeeld content API's die je kan gebruiken:
+### Week 1
+De eerste week stond vooral in het teken van opstarten. Ik begon met het ontwerpen van de Pokémonkaarten. In mijn hoofd had ik al een beeld van hoe dat eruit moest zien — iets moderns, met ruimte voor info, maar vooral een leuke uitstraling. Toen ik het eerste ontwerp af had, kreeg ik al snel feedback dat het lijkt niet echt op een Pokémonkaart. Dus dat ben ik de volgende wek meteen gaan aanpassen.
+Verder ben ik ook gaan experimenteren met Tinyhttp, dat was nieuw voor me. Ik gebruikte het om eenvoudige routing op te zetten voor m’n pagina’s. Dat liep in het begin nog niet helemaal lekker, maar ik begon steeds beter te begrijpen hoe ik LiquidJS kon gebruiken om de content dynamisch te maken.
 
-- [MovieDB API](https://developer.themoviedb.org/reference/intro/getting-started)
-- [Rijksmuseum API](https://data.rijksmuseum.nl/object-metadata/api/)
-- [Spotify API](https://developer.spotify.com/documentation/web-api)
-- ...
+### Week 2 
+Deze week ben ik opnieuw begonnen met de kaarten. Ik keek goed naar echte Pokémonkaarten: hoe zit het in elkaar? Welke kleuren, lettertypes, kaders? Op basis daarvan heb ik een nieuwe kaartstijl ontworpen die veel beter voelde. Meer herkenbaar, meer 'Pokémonkaarterig'.
 
-Voorbeelden van Web API's die je kan gebruiken:
+Ook begon ik aan de structuur van mijn webapp. Ik maakte drie pagina’s aan: een homepage (index), een pagina waar je gelikete kaarten kunt terugzien (likes), en een detailpagina waar je meer info ziet over een specifieke Pokémon.
 
-- [Page Transition API voor animaties tusse npagina's](https://developer.mozilla.org/en-US/docs/Web/API/Page_Transitions_API)
-- [Web Animations API voor complexe animaties](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API)
-- [Service Worker API voor installable web apps](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
-- [Web Push API voor push notifications](https://developer.mozilla.org/en-US/docs/Web/API/Push_API)
-- [Server sent events voor realtime functionaliteit](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events)
-- [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
-- [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API)
-- [Web Share API voor sharen van content binnen de context van de gebruiker](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share)
-- ...
+Ik was ook al voorzichtig begonnen aan de swipe-ervaring. Ik wilde dat het er soepel uitzag, met een vloeiende animatie bij het swipen. Touch-events werken echter heel anders dan gewone muisklikken, dus het was nog wel wat uitzoekwerk.
 
-De lijst is eindeloos, laat je vooral inspireren op de overzichtspagina van [MDN](https://developer.mozilla.org/en-US/docs/Web/API).
+### Week 3 
+Nu werd het serieus. De kaartjes zagen er goed uit, de basispagina’s stonden — tijd voor JavaScript. Deze week ben ik echt begonnen met het schrijven van de logica achter de app.
+Het doel was om Pokémon op te slaan als je ze likete, en dat moest allemaal gebeuren in de browser. Dus ik gebruikte localStorage, eigenlijk mijn eerste api binnen dit project. In het begin werkte het nog niet helemaal zoals ik wilde. Soms werden Pokémon niet goed opgeslagen, of verschenen ze niet in de lijst met gelikete kaarten.
 
-## Beoordeling
-De beoordelingscriteria zijn te vinden op [DLO](https://dlo.mijnhva.nl/d2l/le/content/609470/Home)
+### Week 4
+De laatste week draaide vooral om afwerking, maar ik heb ook nog iets nieuws toegevoegd: kleuranalyse. Tabel bij de index pagina aangepast werd op basis van het type van de Pokémon (ook heb ik de kleurcode getoont, dit is meer om de api goed te laten zien, en minder design gericht). Daarvoor had ik een stuk JavaScript op internet gevonden, dat elke vijfde pixel van het plaatje oppikt, de RGB-waarden bij elkaar optelt en daar het gemiddelde van neemt. Zo berekent de code één kleur die past bij de afbeelding.
+De logica erachter is eigenlijk best elegant: je hoeft niet elk pixel te pakken, alleen een representatieve steekproef.
 
-## Planning
+Verder heb ik het design overal wat strakker gemaakt:
+<li> Responsive gedrag verbeterd voor mobiel
+<li> CSS opgeschoond en statische bestanden beter gestructureerd
 
-| Planning                   | Maandag               | Dinsdag            | Vrijdag                                     |
-|----------------------------|-----------------------|--------------------|---------------------------------------------|
-| Week 1 - Kickoff & concept | Introductie ne uitleg | Workshops          | Feedback gesprekken                         |
-| Week 2 - The baseline      | College + workshops   | Workshops          | Feedback gesprekken                         |
-| Week 3 - Enhance           | College + workshops   | Workshops          | Feedback gesprekken(*DONDERDAG*)            |
-| Week 4 - Enhance & wrap up | Tweede paasdag        | Individuele vragen | Beoordelingsgesprekken(*DONDERDAG/VRIJDAG*) |
+## Conclusie
 
-## Bronnen
+Ik ben eigenlijk wel trots op hoe het is geworden. Het project ziet er leuk uit, is technisch uitdagend genoeg geweest, en het liken werkt zoals ik wilde.Als ik meer tijd had gehad, had ik misschien iets met echte gebruikersdata gedaan, of een database toegevoegd. Maar voor nu is het een mooie proof-of-concept geworden die laat zien wat je kunt maken met alleen de browser, wat JS en een goed idee.
 
-- [Nodejs.org](https://nodejs.org/en/), voor de installatie van NodeJS op jouw systeem, kies voor NodeJS 22.13.1 Long Term Support. Dit is de meest stabiele versie van NodeJS, welke ondersteund wordt met goede documentatie.
-- [VSCode How To Open Terminal](https://www.youtube.com/watch?v=OmQhOnBzg_k), om iemand de terminal te zien openen en gebruiken op Youtube.
-- [Introduction to NodeJS](https://nodejs.dev/en/learn/), voor een in depth introductie met de NodeJS ontwikkelomgeving. Let op: dit is best een technisch verhaal. De eerste zes pagina’s zijn interessant.
-- Om serverside te kunnen renderen maken we gebruik van [TinyHttp](https://github.com/tinyhttp).
-- Voor templating maken we gebruik van [LiquidJS](https://liquidjs.com/).
-- [Liquid Filters](https://liquidjs.com/filters/overview.html)
-- Voor build tooling(CSS en JS) maken we gebruik [Vite](https://vitejs.dev/).
-- [Using the Fetch API @ MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
-- [JSON.parse() @ MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
-- [Partial commits in GitHub Desktop](https://github.blog/news-insights/product-news/partial-commits-in-github-for-windows/)
-- [Committing and reviewing changes to your project in GitHub Desktop](https://docs.github.com/en/desktop/making-changes-in-a-branch/committing-and-reviewing-changes-to-your-project-in-github-desktop)
+Techniek
 
-## Inrichten ontwikkelomgeving
+Talen: JavaScript, HTML, CSSFrameworks/libraries:
 
-1. Navigeer naar [nodejs.org](https://nodejs.org/en/) en installeer de NodeJS ontwikkelomgeving. Kies voor _NodeJS 22.13.1 with long-term support_, download de benodigde bestanden en doorloop het installatieproces.
+Tinyhttp
 
-2. Fork daarna [deze repository](https://github.com/cmda-minor-web/API-2425) en *clone* deze op jouw computer.
+LiquidJS
 
-3. Open deze repository in je code editor.
+localStorage (API)
 
-4. Open de _Terminal_ in Visual Studio Code door de toetscombinatie `` ^` `` (control + `) te gebruiken. Er opent een terminalscherm in de hoofdmap van jouw project.
+Canva kleuranalyse (eigen code)
 
-5. Voer in de terminal het commando `npm install` uit, door het in te typen en op enter te drukken. Je gebruikt _NPM_, de _NodeJS Package Manager_ om alle _afhankelijkheden_ voor dit project te installeren. NPM is een veelgebruikte package manager in frontend land. Voor dit project gebruiken we _TinyHTTP_ (om een _server_ te maken) en _Liquid_ (om HTML te _renderen_).
-- (Optioneel) Na de installatie is de map `node_modules` aangemaakt, en gevuld met allerlei _packages_. Scroll eens door deze map heen; vele honderden *open source* ontwikkelaars hebben de packages die je ziet gebouwd en die mag je gratis gebruiken. Ontwikkelen in NodeJS is *standing on the shoulders of giants*.
+Frontend bestanden: swipe.js, liked.jsServer: server.js (voor simpele routing met Tinyhttp)
 
-### Project starten en stoppen
-Start het voorbeeldproject op door in de terminal het commando `npm run dev` uit te voeren. Als het goed is, komt een melding te staan over het opstarten van de server: `Server available on http://localhost:3000` — Open deze URL in je browser. Let op: Vite draait op een andere poort dan TinyHTTP, dus je moet de poort van TinyHTTP gebruiken: http://localhost:3000
-
-Als het werkt, zet je je server weer uit door in de terminal de toetscombinatie `^c` (control + c) in te voeren. Deze toetsencombinatie wordt in de terminal gebruikt om de huidige taak te stoppen en *controle* (vandaar de c) terug te krijgen van het programma.
-
-- Optioneel: Volg het [NodeJS ‘Hello World’ voorbeeld](https://medium.com/@mohammedijas/hello-world-in-node-js-b333275ddc89)
-- Optioneel, iets technischer: Lees de eerste vijf delen van [Introduction to Node](https://nodejs.dev/en/learn/) als je een meer in-depth introductie wilt met de NodeJS ontwikkelomgeving.
+Styling: alles custom, geen CSS-frameworks gebruikt
 
