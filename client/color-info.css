@@ -1,0 +1,27 @@
+/* client/css/color-info.css */
+.color-info {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .color-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px 0;
+  }
+  
+  .color-box {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid #ddd;
+  }
+  
+  .color-text {
+    font-family: monospace;
+    font-size: 14px;
+  }
+  
